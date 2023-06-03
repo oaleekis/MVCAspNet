@@ -1,0 +1,35 @@
+﻿@model ClienteModel
+@{
+	ViewData["Title"] = "Adicionar Cliente";
+}
+<h3>Adicionar Cliente</h3>
+
+<form asp-controller="Cliente" asp-action="Criar" method="post">
+  <div class="form-group">
+    <label for="nome">Nome</label>
+    <input type="text" asp-for="Nome" class="form-control" placeholder="Nome do cliente">
+  </div>
+  <div class="form-group">
+    <label for="cpf">CPF</label>
+    <input type="text" asp-for="Cpf" class="form-control" placeholder="CPF do cliente">
+  </div>
+  <div class="form-group">
+    <label for="dataNasc">Data Nasc.</label>
+    <input type="text" asp-for="DataNascimento" class="form-control" placeholder="Data de Nascimento do cliente">
+  </div>
+  <div class="form-group">
+    <label for="email">E-mail</label>
+    <input type="email" asp-for="Email" class="form-control" placeholder="E-mail do cliente">
+  </div>
+  <div class="form-group">
+    <label for="telefone">Fone/Celular</label>
+    <input type="text" asp-for="Telefone" class="form-control" placeholder="Telefone ou celular do cliente">
+  </div>
+  <div class="form-group">
+    <label for="endereco">Endereço</label>
+    <input type="text" asp-for="Endereco" class="form-control" placeholder="Endereço do cliente">
+  </div>
+  
+  <button style="margin-top:10px;" type="submit" class="btn btn-success">Cadastrar</button>
+  <a style="margin-top:10px;" class="btn btn-secondary" asp-controller="Cliente" asp-action="Index" role="button">Voltar</a>
+</form>
